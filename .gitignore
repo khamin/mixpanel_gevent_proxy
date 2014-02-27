@@ -6,3 +6,4 @@ develop-eggs/
 parts/
 TODO
 .installed.cfg
+dist/
