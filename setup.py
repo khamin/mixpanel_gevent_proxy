@@ -1,32 +1,30 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -
 
-from setuptools import setup, find_packages
-
-
-PACKAGES = find_packages()
+from setuptools import setup
 
 
 setup(
 	name = 'mixpanel_gevent_proxy',
 	version = '1.0',
-	packages = PACKAGES,
+
+	packages = [
+		'mixpanel_gevent_proxy'
+	],
+
 	package_dir = {'': '.'},
+
 	author = 'Vitaliy Khamin',
 	author_email = 'vitaliykhamin@gmail.com',
 	maintainer = 'Vitaliy Khamin',
 	maintainer_email = 'vitaliykhamin@gmail.com',
 	description = 'Mixpanel Gevent Proxy',
-	url = '',
+	url = 'https://github.com/khamin/mixpanel_gevent_proxy',
 	zip_safe = True,
-
-	platforms = (
-		'any',
-	),
 
 	classifiers = (
 		'Operating System :: OS Independent',
-		'Programming Language :: Python',
+		'Programming Language :: Python'
 	),
 
 	dependency_links = [
@@ -34,12 +32,12 @@ setup(
 
 	install_requires = [
 		'gevent',
-		'mixpanel-py',
+		'mixpanel-py'
 	],
 
 	entry_points = {
 		'console_scripts': [
-			'mixpanel_gevent_proxy = mixpanel_gevent_proxy:main',
-		],
-	},
+			'mixpanel_gevent_proxy = mixpanel_gevent_proxy:main'
+		]
+	}
 )
